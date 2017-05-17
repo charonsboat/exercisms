@@ -3,7 +3,7 @@ if !System.get_env("EXERCISM_TEST_EXAMPLES") do
 end
 
 ExUnit.start
-ExUnit.configure trace: true, exclude: :pending
+ExUnit.configure trace: true
 
 defmodule StrainTest do
   use ExUnit.Case
@@ -93,4 +93,3 @@ defmodule StrainTest do
     assert Strain.discard(rows, fn row -> 5 in row end) == [[1, 2, 3], [2, 1, 2], [2, 2, 1]]
   end
 end
-
